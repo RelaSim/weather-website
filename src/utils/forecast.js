@@ -10,7 +10,7 @@ const forecast = (latitude, longitude,callback)=>{
         }else if (body.error){
             callback('Invalid value of longitute or latitude. Please try again ')
         } else{
-            console.log(body.daily.data[0])
+           // console.log(body.daily.data[0])
            callback(undefined, {
                summary : body.daily.data[0].summary+' It is currently '+body.currently.temperature+' degrees out. There is a '+ body.currently.precipProbability+'% of rain. Higest today will be '+ body.daily.data[0].temperatureHigh+ ' and lowest will be ' + body.daily.data[0].temperatureLow
            })
